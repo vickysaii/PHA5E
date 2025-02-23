@@ -1,0 +1,639 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #212121;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+/* Large Text Overlay */
+.overlay-text {
+    position: absolute;
+    z-index: 2;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay-text h1 {
+    font-size: 8vw;
+    font-weight: bolder;
+    line-height: 1;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Image Styling */
+.images {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.img-small {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.img-small:hover {
+    animation: zigzag 0.6s infinite alternate ease-in-out;
+}
+
+/* Hide text and other images when one image is hovered */
+.images:hover .overlay-text {
+    opacity: 0.2;
+    /* Reduce text visibility */
+}
+
+.images:hover .img-small {
+    opacity: 0.2;
+    /* Reduce opacity of all images */
+}
+
+.img-small:hover {
+    opacity: 1 !important;
+    /* Keep hovered image fully visible */
+}
+
+/* Zigzag animation */
+@keyframes zigzag {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+
+    25% {
+        transform: translateX(10px) translateY(-10px);
+    }
+
+    50% {
+        transform: translateX(-10px) translateY(10px);
+    }
+
+    75% {
+        transform: translateX(10px) translateY(10px);
+    }
+
+    100% {
+        transform: translateX(-10px) translateY(-10px);
+    }
+}
+
+
+
+
+/* Video Section */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #212121;
+    /* Dark background */
+}
+
+.video-container {
+    width: 80%;
+    /* Adjust width to leave gaps on left & right */
+    max-width: 1200px;
+    /* Prevents video from becoming too wide on large screens */
+    aspect-ratio: 16 / 9;
+    /* Maintains proper aspect ratio */
+    position: relative;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    /* Removes iframe border */
+}
+
+
+
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    /* Prevents interaction */
+}
+
+.vision-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    background-color: #212121;
+    position: relative;
+}
+
+.vision-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+.vision-icon {
+    width: 150px;
+}
+
+.vision-icon img {
+    width: 100;
+    height: 130px;
+}
+
+.vision-left {
+    width: 50%;
+    padding-right: 50px;
+}
+
+.vision-left h4 {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.see-more {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    margin-top: 10px;
+    border-bottom: 1px solid white;
+}
+
+.vision-right {
+    width: 40%;
+    text-align: left;
+    position: relative;
+}
+
+.vision-right h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    /* Ensures text is above other elements */
+}
+
+.vision-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    background-color: #212121;
+    position: relative;
+}
+
+.vision-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+.vision-left {
+    width: 50%;
+    padding-right: 50px;
+}
+
+.vision-left p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.see-more {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    margin-top: 10px;
+    border-bottom: 1px solid white;
+}
+
+.vision-right {
+    width: 40%;
+    text-align: right;
+    position: relative;
+}
+
+.vision-right h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    /* Ensures text remains on top */
+}
+
+/* Vision Icon Positioned to the Right */
+.vision-icon {
+    position: absolute;
+    right: 5%;
+    /* Moves it to the right */
+    top: 10px;
+    /* Adjusts overlap slightly */
+    z-index: 1;
+    /* Ensures it is behind the text */
+}
+
+.vision-icon img {
+    width: 100px;
+    /* Adjust size */
+    opacity: 0.8;
+    /* Slight transparency for blending */
+}
+
+/* Vision Label */
+.vision-label {
+    position: absolute;
+    left: -60px;
+    top: 30%;
+    transform: rotate(-90deg);
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .vision-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vision-left,
+    .vision-right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .vision-icon {
+        right: 10%;
+        /* Adjust for smaller screens */
+        top: -10px;
+        /* Maintain overlap */
+    }
+}
+
+
+
+/* Image Positioning */
+.top-left {
+    top: 20%;
+    left: 10%;
+}
+
+.top-right {
+    top: 15%;
+    right: 10%;
+}
+
+.bottom-left {
+    bottom: 15%;
+    left: 12%;
+}
+
+.bottom-right {
+    bottom: 20%;
+    right: 15%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .overlay-text h1 {
+        font-size: 10vw;
+    }
+
+    .img-small {
+        width: 150px;
+    }
+
+    .video-section {
+        height: 50vh;
+    }
+}
+
+.insight-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    background-color: #212121;
+    position: relative;
+    color: white;
+}
+
+.insight-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+}
+
+.insight-text {
+    width: 50%;
+    text-align: left;
+}
+
+.insight-text h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.insight-details {
+    width: 45%;
+    text-align: left;
+}
+
+.insight-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.insight-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    margin-top: 10px;
+    border-bottom: 1px solid white;
+}
+
+/* Symbol Styling */
+.insight-symbol {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    z-index: -1;
+    /* Puts it behind the text */
+}
+
+.insight-symbol img {
+    width: 150px;
+    /* Adjust size */
+}
+
+
+/* Insight Label */
+.insight-label {
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: rotate(-90deg) translateY(-50%);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding-left: 20px;
+    /* Adds spacing between label and content */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .insight-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .insight-text,
+    .insight-details {
+        width: 100%;
+        padding: 0;
+    }
+
+    .insight-symbol {
+        right: 50%;
+        top: 30%;
+        transform: translateX(50%);
+        opacity: 0.4;
+    }
+}
+
+/* Awards Section */
+.awards-section {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #212121;
+    /* Matches the theme */
+}
+
+.awards-title {
+    color: #bbb;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.awards-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    /* Adjust spacing between logos */
+}
+
+.awards-logos img {
+    max-width: 160px;
+    height: auto;
+    /* Matches the aesthetic */
+}
+
+.awards-description {
+    color: #ddd;
+    font-size: 14px;
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: white;
+    padding: 80px 80px;
+    width: 100%;
+    margin-top: auto;
+    /* Ensures footer sticks at the bottom */
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+    border-bottom: 2px solid black;
+}
+
+.footer-nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.footer-nav nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    padding: 0;
+}
+
+.footer-nav nav ul li {
+    font-size: 18px;
+}
+
+.footer-nav nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: lighter;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1400px;
+    margin: 40px auto 0;
+    flex-wrap: wrap;
+    /* Makes it responsive */
+}
+
+.footer-address {
+    font-size: 35px;
+    font-weight: bolder;
+    color: black;
+    line-height: 1.5;
+}
+
+.footer-contact {
+    text-align: right;
+    font-size: 20px;
+    color: black;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.contact-info {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.legal a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.footer-heading {
+    font-size: 100px;
+    /* Large text */
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: scale(0.9);
+    /* Slightly smaller initially */
+    pointer-events: none;
+    /* Prevents interaction until hovered */
+}
+
+.footer:hover .footer-heading {
+    opacity: 1;
+    /* Make it visible on hover */
+    transform: scale(1);
+    /* Scale up smoothly */
+}
